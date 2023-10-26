@@ -1,3 +1,4 @@
+import 'package:flipkartprofile/Bottumnavigation.dart';
 import 'package:flipkartprofile/Home.dart';
 import 'package:flutter/material.dart';
 
@@ -12,7 +13,7 @@ class _SplashscreenState extends State<Splashscreen> {
   @override
   Widget build(BuildContext context) {
     Future.delayed(Duration(seconds: 3),(){
-    Navigator.push(context, MaterialPageRoute(builder:(context)=>Homescreen()));
+    Navigator.push(context, MaterialPageRoute(builder:(context)=>Bottomnavigation()));
     });
     return Scaffold(
       body: Container(

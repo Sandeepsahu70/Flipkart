@@ -16,7 +16,7 @@ class _MobileState extends State<Mobile> {
   Widget build(BuildContext context) {
     return Container(
       height: 180.0,
-      width: 120.0,
+      width: 110.0,
       decoration: BoxDecoration(
         color: Colors.purpleAccent.shade100,
         borderRadius: BorderRadius.circular(5.0),

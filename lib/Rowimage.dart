@@ -16,7 +16,7 @@ class _RowimageState extends State<Rowimage> {
 
         CircleAvatar(
           backgroundImage:widget.Rowimagepath,
-          radius: 36.0,
+          radius: 32.0,
         ),
         // widget.Textpath
         Text(widget.Textpath,style: TextStyle(fontSize: 14,fontWeight: FontWeight.w800),)

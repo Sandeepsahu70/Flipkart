@@ -19,7 +19,7 @@ class _PocoscreenState extends State<Pocoscreen> {
             ),
             Container(
               height: 200.0,
-              width: 400.0,
+              width: 360.0,
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10.0),
                   image: DecorationImage(image:AssetImage('assets/pocobanner1.jpg'),
@@ -30,15 +30,15 @@ class _PocoscreenState extends State<Pocoscreen> {
               height: 16.0,
             ),
             Vivoshorcut(
-                Imagepath2: Image.asset('assets/realme.jpeg'),
+                Imagepath2: Image.asset('assets/poco m2pro.jpeg'),
                 mobilename: Text(
-                  'Realme 10pro(8 128gold)',
+                  'poco M2 pro(8 128gold)',
                   style: TextStyle(fontSize: 18, fontWeight: FontWeight.w800),
                 ),
                 ranking: Text('* * * * *',
                   style: TextStyle(fontSize: 28, fontWeight: FontWeight.w800),
                 ),
-                price: Text('12599/-',
+                price: Text('15599/-',
                   style: TextStyle(fontSize: 18, fontWeight: FontWeight.w800),
                 ),
                 deals: Text('   best deal in\n 128gb variant',
@@ -47,19 +47,19 @@ class _PocoscreenState extends State<Pocoscreen> {
             ),
             SizedBox(height: 10.0,),
             Vivoshorcut(
-                Imagepath2: Image.asset('assets/poco1.webp'),
+                Imagepath2: Image.asset('assets/pocof4.jpg'),
                 mobilename: Text(
-                  'Poco1 Pro \n'
+                  'Poco F4Pro \n'
                       '(Cosmic Black,\n'
                       '8GB+128GB) \n',
                   style: TextStyle(fontSize: 18, fontWeight: FontWeight.w800),
                 ),
                 ranking: Text('Ultra Smooth 120 Hz\n'
-                    'Super Amoled Curved Display ',
-                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.w800),
+                    'SuperAmoled Curved Display',
+                  style: TextStyle(fontSize: 14, fontWeight: FontWeight.w800),
                 ),
-                price: Text('| 100 MP OIS Camera',
-                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.w800),
+                price: Text('100 MP OIS Camera',
+                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.w800),
                 ),
                 deals: Text('21599/-',
                   style: TextStyle(fontSize: 18, fontWeight: FontWeight.w800),

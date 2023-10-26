@@ -14,7 +14,7 @@ class _ShortcuttState extends State<Shortcutt> {
   Widget build(BuildContext context) {
     return Container(
       height: 200.0,
-               width:375.0,
+               width:340.0,
                decoration: BoxDecoration(
                  borderRadius: BorderRadius.circular(15.0),
                  border: Border.all(
