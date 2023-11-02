@@ -6,6 +6,8 @@ import 'package:flipkartprofile/realme.dart';
 import 'package:flipkartprofile/vivomobile.dart';
 import 'package:flutter/material.dart';
 
+import 'Gridview.dart';
+
 class Homescreen extends StatefulWidget {
   const Homescreen({super.key});
 
@@ -22,7 +24,7 @@ class _HomescreenState extends State<Homescreen> {
           body: SingleChildScrollView(
             scrollDirection: Axis.vertical,
             child: Padding(
-              padding: EdgeInsets.all(8.0),
+              padding: const EdgeInsets.all(8.0),
               child: Column(
                 children: [
                   Row(
@@ -43,7 +45,7 @@ class _HomescreenState extends State<Homescreen> {
                                 height: 20.0,
                                 width: 30.0,
                               ),
-                              Text(
+                              const Text(
                                 'Flipkart',
                                 style: TextStyle(
                                     fontSize: 18,
@@ -54,7 +56,7 @@ class _HomescreenState extends State<Homescreen> {
                           ),
                         ),
                       ),
-                      Spacer(),
+                      const Spacer(),
                       Container(
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10.0),
@@ -68,7 +70,7 @@ class _HomescreenState extends State<Homescreen> {
                             children: [
                               Image.asset('assets/grocery.jpeg',
                                   height: 20.0, width: 30.0),
-                              Text('Grocery',
+                              const Text('Grocery',
                                   style: TextStyle(
                                     fontSize: 18,
                                     fontWeight: FontWeight.w500,
@@ -79,80 +81,46 @@ class _HomescreenState extends State<Homescreen> {
                       )
                     ],
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 10.0,
                   ),
-                  
                   Row(
                     children: [
-                      Column(
+                      const Column(
                         children: [
                           Text('Brand mall'),
                           Icon(Icons.smart_button),
                         ],
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 18.0,
                       ),
-                      Container(
-                        height: 45.0,
-                        width: 250.0,
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(12.0),
-                            border: Border.all(
-                              color: Colors.black87,
-                            )),
-                        child: Row(
-                          children: [
-                            // SizedBox(width: 8.0,),
-                            Icon(
-                              Icons.search_outlined,
-                              size: 30,
-                              color: Colors.grey,
-                            ),
-                            Expanded(
-                              child: TextField(
-
-                                  // decoration: InputDecoration(
-                                  //   fillColor: Colors.transparent,filled:true,
-                                  //   hintText: 'Search',
-                                  //   contentPadding: const EdgeInsets.symmetric(
-                                  //     vertical: 0,horizontal: 20
-                                  //   ),
-                                  //   prefixIcon: const Icon(Icons.search_outlined,size: 22,),
-                                  //
-                                  //   border: OutlineInputBorder(
-                                  //     borderRadius: BorderRadius.circular(14.0)
-                                  //   )
-                                  // ),
-                                  ),
-                            ),
-                            SizedBox(
-                              width: 24.0,
-                            ),
-                            Icon(
-                              Icons.mic,
-                              color: Colors.grey,
-                              size: 30.0,
-                            ),
-                            SizedBox(
-                              width: 22.0,
-                            ),
-
-                            Icon(
-                              Icons.camera_alt,
-                              color: Colors.grey,
-                              size: 30.0,
-                            ),
-                          ],
+                      Expanded(
+                        child: Container(
+                          height: 45.0,
+                          child:
+                          TextField(
+                            decoration: InputDecoration(
+                                fillColor: Colors.transparent,filled:true,
+                                hintText: 'Search',
+                                contentPadding: const EdgeInsets.symmetric(
+                                  vertical: 0,horizontal: 20
+                                ),
+                                prefixIcon: const Icon(Icons.search_outlined,size: 22,),
+                                suffixIcon: const Icon(Icons.camera_alt_outlined,size: 28,),
+                                border: OutlineInputBorder(
+                                  borderRadius: BorderRadius.circular(14.0)
+                                )
+                              ),
+                              ),
                         ),
                       )
                     ],
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 10.0,
                   ),
-                  SingleChildScrollView(
+                  const SingleChildScrollView(
                     scrollDirection: Axis.horizontal,
                     child: Row(
                       children: [
@@ -196,106 +164,113 @@ class _HomescreenState extends State<Homescreen> {
                       ],
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 8.0,
                   ),
                   Container(
                       height: 200.0,
-                      width: 400.0,
                       color: Colors.purpleAccent.shade100,
                       child: Column(
                         children: [
-                          Row(
-                            children: [
-                              Rowimage(
-                                Rowimagepath: AssetImage('assets/top offer.png'),
-                                Textpath: 'topoffer',
-                              ),
-                              SizedBox(
-                                width: 3.0,
-                              ),
-                              Rowimage(
-                                Rowimagepath: AssetImage('assets/fashion.png'),
-                                Textpath: ' fashion',
-                              ),
-                              SizedBox(
-                                width: 3.0,
-                              ),
-                              Rowimage(
-                                Rowimagepath: AssetImage('assets/flights.png'),
-                                Textpath: 'flights',
-                              ),
-                              SizedBox(
-                                width: 3.0,
-                              ),
-                              Rowimage(
-                                Rowimagepath: AssetImage('assets/grocery.png'),
-                                Textpath: 'grocery',
-                              ),
-                              SizedBox(
-                                width: 5.0,
-                              ),
-                              Rowimage(
-                                Rowimagepath: AssetImage('assets/mobiles.png'),
-                                Textpath: 'mobiles',
-                              ),
-                            ],
+                          Expanded(
+                            child: Row(
+                              children: [
+                                Rowimage(
+                                  Rowimagepath: AssetImage('assets/top offer.png'),
+                                  Textpath: 'topoffer',
+                                ),
+                                SizedBox(
+                                  width: 3.0,
+                                ),
+                                Rowimage(
+                                  Rowimagepath: AssetImage('assets/beauty.webp'),
+                                  Textpath: ' fashion',
+                                ),
+                                SizedBox(
+                                  width: 3.0,
+                                ),
+                                Rowimage(
+                                  Rowimagepath: AssetImage('assets/flights.png'),
+                                  Textpath: 'flights',
+                                ),
+                                SizedBox(
+                                  width: 3.0,
+                                ),
+                                InkWell(
+                                    onTap:(){
+                            Navigator.push(context, MaterialPageRoute(builder: (context)=>Gridviewpage()));
+                                    },
+                                  child: Rowimage(
+                                    Rowimagepath: AssetImage('assets/grocery.png'),
+                                    Textpath: 'grocery',
+                                  ),
+                                ),
+                                SizedBox(
+                                  width: 5.0,
+                                ),
+                                Rowimage(
+                                  Rowimagepath: AssetImage('assets/mobiles.png'),
+                                  Textpath: 'mobiles',
+                                ),
+                              ],
+                            ),
                           ),
                           SizedBox(
                             height: 8.0,
                           ),
-                          Row(
-                            children: [
-                              Rowimage(
-                                Rowimagepath: AssetImage('assets/Electronis.png'),
-                                Textpath: 'Electronis',
-                              ),
-                              SizedBox(
-                                width: 3.0,
-                              ),
-                              Rowimage(
-                                Rowimagepath: AssetImage('assets/tv.png'),
-                                Textpath: 'Televisions',
-                              ),
-                              SizedBox(
-                                width: 3.0,
-                              ),
-                              Rowimage(
-                                Rowimagepath:
-                                    AssetImage('assets/home and kitchen.png'),
-                                Textpath: 'home&\nkitchen',
-                              ),
-                              SizedBox(
-                                width: 3.0,
-                              ),
-                              Rowimage(
-                                Rowimagepath: AssetImage('assets/beauty.webp'),
-                                Textpath: ' beauty',
-                              ),
-                              SizedBox(
-                                width: 3.0,
-                              ),
-                              Rowimage(
-                                Rowimagepath: AssetImage('assets/mobiles.png'),
-                                Textpath: 'mobiles',
-                              ),
-                            ],
+                          Expanded(
+                            child: Row(
+                              children: [
+                                Rowimage(
+                                  Rowimagepath: AssetImage('assets/Electronis.png'),
+                                  Textpath: 'Electronis',
+                                ),
+                                SizedBox(
+                                  width: 3.0,
+                                ),
+                                Rowimage(
+                                  Rowimagepath: AssetImage('assets/tv.png'),
+                                  Textpath: 'Televisions',
+                                ),
+                                SizedBox(
+                                  width: 3.0,
+                                ),
+                                Rowimage(
+                                  Rowimagepath:
+                                      AssetImage('assets/home and kitchen.png'),
+                                  Textpath: 'home&\nkitchen',
+                                ),
+                                SizedBox(
+                                  width: 3.0,
+                                ),
+                                Rowimage(
+                                  Rowimagepath: AssetImage('assets/beauty.webp'),
+                                  Textpath: ' beauty',
+                                ),
+                                SizedBox(
+                                  width: 3.0,
+                                ),
+                                Rowimage(
+                                  Rowimagepath: AssetImage('assets/mobiles.png'),
+                                  Textpath: 'mobiles',
+                                ),
+                              ],
+                            ),
                           ),
                         ],
                       )),
-                  SizedBox(
-                    height: 4.0,
+                  const SizedBox(
+                    height: 8.0,
                   ),
                   Container(
                       height: 120.0,
-                      width: 400.0,
-                      decoration: BoxDecoration(
+                      decoration: const BoxDecoration(
                           image: DecorationImage(
                               image: AssetImage(
                                   'assets/flipkart-mobilebonanza-offer-banner-13112019.png'),
                               fit: BoxFit.fill))),
-                  SizedBox(
-                    height: 4.0,
+                  const SizedBox(
+                    height: 10.0,
                   ),
                   Row(
                     children: [
@@ -304,14 +279,14 @@ class _HomescreenState extends State<Homescreen> {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => Vivomobile()));
+                                    builder: (context) => const Vivomobile()));
                           },
                           child: Mobile(
-                              Textpath: Text('vivo mobile'),
+                              Textpath: const Text('vivo mobile'),
                               Mobileimagepath: Image.asset('assets/vivo4.jpeg'),
-                              mobilename: Text('vivo starting'),
-                              price: Text('12999'))),
-                      SizedBox(
+                              mobilename: const Text('vivo starting'),
+                              price: const Text('12999'))),
+                      const SizedBox(
                         width: 4.0,
                       ),
                       InkWell(
@@ -319,14 +294,14 @@ class _HomescreenState extends State<Homescreen> {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => Pocoscreen()));
+                                    builder: (context) => const Pocoscreen()));
                           },
                           child: Mobile(
-                              Textpath: Text('poco mobile'),
+                              Textpath: const Text('poco mobile'),
                               Mobileimagepath: Image.asset('assets/poco1.jpeg'),
-                              mobilename: Text('poco starting'),
-                              price: Text('12999'))),
-                      SizedBox(
+                              mobilename: const Text('poco starting'),
+                              price: const Text('12999'))),
+                      const SizedBox(
                         width: 4.0,
                       ),
                       InkWell(
@@ -334,43 +309,178 @@ class _HomescreenState extends State<Homescreen> {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => Realmescreen()));
+                                    builder: (context) => const Realmescreen()));
                           },
                           child: Mobile(
-                              Textpath: Text('realme mobile'),
+                              Textpath: const Text('realme mobile'),
                               Mobileimagepath: Image.asset('assets/realme1.jpeg'),
-                              mobilename: Text('realme starting'),
-                              price: Text('12999'))),
+                              mobilename: const Text('realme starting'),
+                              price: const Text('12999'))),
                     ],
                   ),
-                  SizedBox(
-                    height: 4.0,
+                  const SizedBox(
+                    height: 8.0,
                   ),
                   Row(
                     children: [
                       Mobile(
-                          Textpath: Text('Laptops'),
+                          Textpath: const Text('Laptops'),
                           Mobileimagepath: Image.asset('assets/best-laptops.png'),
-                          mobilename: Text('laptops starting'),
-                          price: Text('22999')),
-                      SizedBox(
+                          mobilename: const Text('laptops starting'),
+                          price: const Text('22999')),
+                      const SizedBox(
                         width: 4.0,
                       ),
                       Mobile(
-                          Textpath: Text('Smart Tv'),
+                          Textpath: const Text('Smart Tv'),
                           Mobileimagepath: Image.asset('assets/tv(2).jpeg'),
-                          mobilename: Text('tv starting'),
-                          price: Text('15999')),
-                      SizedBox(
+                          mobilename: const Text('tv starting'),
+                          price: const Text('15999')),
+                      const SizedBox(
                         width: 4.0,
                       ),
                       Mobile(
-                          Textpath: Text('Smart watch'),
+                          Textpath: const Text('Smart watch'),
                           Mobileimagepath: Image.asset('assets/watch.png'),
-                          mobilename: Text('watch starting'),
-                          price: Text('999')),
+                          mobilename: const Text('watch starting'),
+                          price: const Text('999')),
                     ],
-                  )
+                  ),
+                  const SizedBox(height: 4.0,),
+                  Padding(
+                    padding: const EdgeInsets.all(16.0),
+                    child: Row(
+                      children: [const SizedBox(width: 8.0,),
+                        Expanded(
+                          child: Container(
+                            height: 180.0,
+                            decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(10.0),
+                                border: Border.all(style: BorderStyle.solid),
+                                image: const DecorationImage(
+                                  image: AssetImage('assets/Electronis.png'),
+                                  fit: BoxFit.scaleDown,),color: Colors.white),
+
+                            child:const Text('         Electronis',
+                              style: TextStyle(
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.w500,
+                                  color: Colors.black),
+                            ),),
+                        ),
+                        const SizedBox(width: 10.0,),
+                        
+                        Expanded(
+                          child: Container(
+                            height: 180.0,
+                            decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(10.0),
+                                border: Border.all(style: BorderStyle.solid),
+                                image: const DecorationImage(
+                                  image: AssetImage('assets/grocery.png'),
+                                  fit: BoxFit.scaleDown,),color: Colors.white),
+
+                            child:const Text('      Grocery',
+                              style: TextStyle(
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.w500,
+                                  color: Colors.black),
+                            ),),
+                        ),
+
+                      ],
+                    ),
+                  ),
+                  const SizedBox(height: 2.0,),
+                  Padding(
+                    padding: const EdgeInsets.all(16.0),
+                    child: Row(
+                      children: [const SizedBox(width: 8.0,),
+                        Expanded(
+                          child: Container(
+                            height: 180.0,
+                            decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(10.0),
+                                border: Border.all(style: BorderStyle.solid),
+                                image: const DecorationImage(
+                                  image: AssetImage('assets/flights.png'),
+                                  fit: BoxFit.scaleDown,),color: Colors.white),
+
+                            child:const Text('         flights',
+                              style: TextStyle(
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.w500,
+                                  color: Colors.black),
+                            ),),
+                        ),
+                        const SizedBox(width: 10.0,),
+
+                        Expanded(
+                          child: Container(
+                            height: 180.0,
+                            decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(10.0),
+                                border: Border.all(style: BorderStyle.solid),
+                                image: const DecorationImage(
+                                  image: AssetImage('assets/furneture.png'),
+                                  fit: BoxFit.scaleDown,),color: Colors.white),
+
+                            child:const Text('      furneture',
+                              style: TextStyle(
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.w500,
+                                  color: Colors.black),
+                            ),),
+                        ),
+
+                      ],
+                    ),
+                  ),
+                  const SizedBox(height: 2.0,),
+                  Padding(
+                    padding: const EdgeInsets.all(16.0),
+                    child: Row(
+                      children: [const SizedBox(width: 8.0,),
+                        Expanded(
+                          child: Container(
+                            height: 180.0,
+                            decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(10.0),
+                                border: Border.all(style: BorderStyle.solid),
+                                image: const DecorationImage(
+                                  image: AssetImage('assets/beauty.webp'),
+                                  fit: BoxFit.scaleDown,),color: Colors.white),
+
+                            child:const Text('  beauty product',
+                              style: TextStyle(
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.w500,
+                                  color: Colors.black),
+                            ),),
+                        ),
+                        const SizedBox(width: 6.0,),
+
+                        Expanded(
+                          child: Container(
+                            height: 180.0,
+                            decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(10.0),
+                                border: Border.all(style: BorderStyle.solid),
+                                image: const DecorationImage(
+                                  image: AssetImage('assets/home and kitchen.png'),
+                                  fit: BoxFit.scaleDown,),color: Colors.white),
+
+                            child:const Text('    home&kitchen',
+                              style: TextStyle(
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.w500,
+                                  color: Colors.black),
+                            ),),
+                        ),
+
+                      ],
+                    ),
+                  ),
                 ],
               ),
             ),

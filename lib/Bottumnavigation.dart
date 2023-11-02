@@ -1,3 +1,4 @@
+import 'package:flipkartprofile/Morepage.dart';
 import 'package:flipkartprofile/account.dart';
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
@@ -53,7 +54,7 @@ class _BottomnavigationState extends State<Bottomnavigation> with SingleTickerPr
           children: [
             Homescreen(),
             Accountpage(),
-            Homescreen(),
+            Morepage(),
             Homescreen(),
             Homescreen(),
           ],

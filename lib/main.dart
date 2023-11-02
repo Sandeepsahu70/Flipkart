@@ -1,4 +1,5 @@
 import 'package:flipkartprofile/Home.dart';
+import 'package:flipkartprofile/Morepage.dart';
 import 'package:flipkartprofile/Splashscreen.dart';
 import 'package:flipkartprofile/account.dart';
 import 'package:flipkartprofile/realme.dart';
